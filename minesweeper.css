@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'LCD';
+  src: url('fonts/lcd.ttf')  format('truetype');
+}
+
+
+body {
+  font-family: sans-serif;
+  line-height: 1.2em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'LCD';
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 15px;
+  font-weight: 400;
+}
+
+
+
+.gameHeader {
+}
+
+.gameTitle {
+  float: center;
+  padding: 2%;
+  box-shadow: 0 21px 0 -20px rgba(0, 0, 0, 0.3);
+  padding-bottom: 20px;
+}
+
+.gameTitle h1 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.gameDetails{
+  float: center;
+  justify-content: space-around;
+  align-content: center;
+  padding-bottom: 5px;
+}
+
+.gameDetails div{
+  flex: 0 1 40%;
+  padding: 1%;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 5px;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5), inset -1px -1px 0px rgba(255, 255, 255, 0.7), inset 100px 100px 100px -100px rgba(0, 0, 0, 0.2);
+}
+
+.value {
+  color: rgba(165, 16, 16, 1) !important;
+  text-shadow: 0 0 0 black, 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+table#minesweeper {
+  margin: auto;
+  margin-top: 3em;
+  border-collapse: collapse;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4), inset 10px 10px 100px rgba(0, 0, 0, 0.4);
+}
+
+table#minesweeper td {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  background-size: cover;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.bombGoingOff {
+  position: absolute;
+  top: -35px;
+  left: -35px;
+  width: 80px;
+  z-index: 1000;
+}
+
+.unopened {
+  background: url('img/unopened.svg');
+  cursor: pointer;
+}
+.mine-neighbour-0 {
+  background: url('img/opened.svg');
+}
+.flagged {
+  background: url('img/flag.svg');
+}
+.question {
+  background: url('img/question.svg');
+}
+.mine {
+  background-image: url('img/mine.png');
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.mine-neighbour-1 {
+  background: url('img/1.svg');
+}
+.mine-neighbour-2 {
+  background: url('img/2.svg');
+}
+.mine-neighbour-3 {
+  background: url('img/3.svg');
+}
+.mine-neighbour-4 {
+  background: url('img/4.svg');
+}
+.mine-neighbour-5 {
+  background: url('img/5.svg');
+}
+.mine-neighbour-6 {
+  background: url('img/6.svg');
+}
+.mine-neighbour-7 {
+  background: url('img/7.svg');
+}
+.mine-neighbour-8 {
+  background: url('img/8.svg');
+}
+

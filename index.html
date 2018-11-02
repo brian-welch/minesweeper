@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minesweeper</title>
+  <link rel="stylesheet" href="minesweeper.css">
+</head>
+<body oncontextmenu="return false;">
+  <!--   <button id="startGameButton">Start the game</button>-->
+  <table id="minesweeper">
+    <tr>
+      <th colspan="1000">
+        <div class="gameHeader">
+          <div class="gameTitle">
+            <h1>minesweeper</h1>
+          </div>
+          <div class="gameDetails">
+            <div class="minesRemaining">
+              <h3 class="label">Mines Remaining: <span class="value" id="minesRemaining">0000</span></h3>
+            </div>
+            <div class="clickCounter">
+              <h3 class="label">Action Counter: <span class="value" id="clickCounter">0000</span></h3>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </table>
+
+    <script type="text/javascript" src="build/application.js"></script>
+  </body>
+  </html>
