@@ -139,13 +139,13 @@ table#minesweeper td {
 
 .deathNotice {
   background-color: rgba(255, 0, 0, 0.7);
-  margin-top: 20px;
+  margin-top: 5px;
   box-shadow: 0 0 0 1px rgba(200, 0, 0, 1), 0 0 50px rgba(255, 0, 0, 1);
 }
 
 .winnerNotice {
   background-color: rgba(0, 255, 0, 0.7);
-  margin-top: 20px;
+  margin-top: 5px;
   box-shadow: 0 0 0 1px rgba(0, 180, 0, 1), 0 0 50px rgba(0, 255, 0, 0.7);
 }
 
