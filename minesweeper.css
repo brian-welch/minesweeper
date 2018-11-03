@@ -5,12 +5,14 @@
 
 
 body {
-  font-family: sans-serif;
+  font-family: 'LCD';
   line-height: 1.2em;
+  background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.99) 0%, rgba(0, 0, 20, 0.6) 40%, rgba(0, 0, 10, 0.85) 80%, rgba(0, 0, 0, 1) 100%), url('https://c1.staticflickr.com/4/3035/2633133052_e4575f786b_b.jpg');
+  background-size: cover;
+  height: calc(100vh - 2.2em);
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'LCD';
   letter-spacing: 1px;
   font-weight: 400;
   margin: 0;
@@ -18,24 +20,19 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   margin: 0;
-  padding: 15px;
+  padding: 10px;
   font-weight: 400;
-}
-
-
-
-.gameHeader {
 }
 
 .gameTitle {
   float: center;
   padding: 2%;
   box-shadow: 0 21px 0 -20px rgba(0, 0, 0, 0.3);
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .gameTitle h1 {
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .gameDetails{
@@ -46,11 +43,10 @@ h1 {
 }
 
 .gameDetails div{
-  flex: 0 1 40%;
   padding: 1%;
   padding-bottom: 10px;
   background-color: rgba(255, 255, 255, 0.7);
-  margin-top: 5px;
+  margin: 5px 5px 5px;
   border-radius: 3px;
   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5), inset -1px -1px 0px rgba(255, 255, 255, 0.7), inset 100px 100px 100px -100px rgba(0, 0, 0, 0.2);
 }
@@ -63,22 +59,21 @@ h1 {
 
 table#minesweeper {
   margin: auto;
-  margin-top: 3em;
+  margin-top: 2em;
   border-collapse: collapse;
-  border-radius: 3px;
   overflow: hidden;
-  padding: 50px;
-  background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4), inset 10px 10px 100px rgba(0, 0, 0, 0.4);
+  background-color: rgba(170, 170, 170, 0.7);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4), inset 10px 10px 100px rgba(0, 0, 0, 0.4), 0 0 200px rgba(0, 0, 0, 0.9);
 }
 
 table#minesweeper td {
   position: relative;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   background-size: cover;
   text-align: center;
   color: rgba(0, 0, 0, 0.5);
+  transition: all ease 300ms;
 }
 
 .bombGoingOff {
@@ -87,6 +82,71 @@ table#minesweeper td {
   left: -35px;
   width: 80px;
   z-index: 1000;
+}
+
+
+.messageBox {
+  position: absolute;
+  padding: 20px;
+  width: 180px;
+  border-radius: 3px;
+  margin-left: calc(50% - 118px);
+  margin-top: -120px;
+  z-index: 2000;
+  transition: all ease-in-out 700ms;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.messageBox > div {
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.3),
+              inset -1px -1px 0px rgba(255, 255, 255, 0.3),
+              inset 100px 100px 100px -100px rgba(0, 0, 0, 0.4),
+              0 0 0 1px rgba(0, 0, 0, 0.15);
+  padding: 7px 10px;
+  font-size: 1.2em;
+  text-align: center;
+  background-color: rgba(200, 200, 200, 0.85);
+}
+
+#restartButton {
+  transition: all ease 300ms;
+  width: 100%;
+  font-size: 1em;
+  font-family: 'LCD';
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+#restartButton:hover {
+  border: 1px solid rgba(255, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+.scoreboard {
+  background-color: rgba(255,255,255,0.5);
+}
+
+
+.deathNotice {
+  background-color: rgba(255, 0, 0, 0.7);
+  margin-top: 20px;
+  box-shadow: 0 0 0 1px rgba(200, 0, 0, 1), 0 0 50px rgba(255, 0, 0, 1);
+}
+
+.winnerNotice {
+  background-color: rgba(0, 255, 0, 0.7);
+  margin-top: 20px;
+  box-shadow: 0 0 0 1px rgba(0, 180, 0, 1), 0 0 50px rgba(0, 255, 0, 0.7);
 }
 
 .unopened {
